@@ -1,0 +1,49 @@
+package ds.arrays;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.Test;
+
+public class P006DuplicatesInArrayBF1 {
+
+	/*
+	Given two arrays, write a method to print their intersection. // Simple
+    [1,2,4,5] [2,4,7,9] => [2,4]
+	 */		
+
+	//	Loop input1 for getting each array element
+	//	Add an inner loop in input1 loop and get input2 elements
+	//	Check input1 element == input2 element and store in output
+
+	private int[] getHighestConsecutiveSum(int[] input){
+
+		
+		
+		
+		throw new RuntimeException("No Consecutive Numbers found");
+	}
+
+	
+	@Test
+	public void example1(){
+
+		int[] input = {2,3,1,7,1};
+	
+		System.out.println(getHighestConsecutiveSum(input));
+
+	}
+
+	@Test
+	public void example2(){
+
+		int[] input = {2,3,1,7,1};
+	
+		System.out.println(getHighestConsecutiveSum(input));
+
+	}
+
+	
+	
+}

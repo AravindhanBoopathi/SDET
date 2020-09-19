@@ -1,0 +1,54 @@
+package ds.arrays;
+
+import java.util.Arrays;
+
+import org.junit.Test;
+
+public class P002RotateArrayReversing {
+
+private int[] getRotateArray(int[] a,int k){
+		
+	// Reverse given input
+	
+	StringBuilder input1 = new StringBuilder(); 
+	input1.append(a.toString());  
+    input1 = input1.reverse(); 
+	
+    System.out.println(a.toString());
+    
+    /*
+	//  split reverse input into k 
+    String flip1,flip2;
+    flip1=input1.toString().substring(0,k+1);
+	flip2=input1.toString().substring(k,input1.length()-1);
+	
+	
+//	System.out.println(input1.toString()+flip1+flip2);
+    
+	
+	*/
+	
+	throw new RuntimeException("No Matching indices");
+
+}
+
+	
+	
+	
+	
+	@Test
+	public void example1(){
+
+		int[] input = {1,2,3,4,5};
+		
+		int times = 2;
+
+		int[] sumindices = getRotateArray(input, times);
+		System.out.println(Arrays.toString(sumindices));
+		
+		}
+	
+
+	
+	
+}
