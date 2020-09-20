@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="P005HighestConsecutiveSumBF1" project="SDET Programs" tests="2" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="ds.arrays.P005HighestConsecutiveSumBF1" incomplete="true">
-    <testcase name="example1" classname="ds.arrays.P005HighestConsecutiveSumBF1" incomplete="true"/>
-    <testcase name="example2" classname="ds.arrays.P005HighestConsecutiveSumBF1" incomplete="true"/>
-  </testsuite>
-</testrun>

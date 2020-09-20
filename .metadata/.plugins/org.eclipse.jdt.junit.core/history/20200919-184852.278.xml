@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="P003ArrayIntersectionBF1" project="SDET Programs" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="ds.arrays.P003ArrayIntersectionBF1" time="0.0">
-    <testcase name="example1" classname="ds.arrays.P003ArrayIntersectionBF1" time="0.0"/>
-  </testsuite>
-</testrun>

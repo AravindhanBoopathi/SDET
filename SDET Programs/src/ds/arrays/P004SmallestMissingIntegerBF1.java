@@ -9,7 +9,7 @@ public class P004SmallestMissingIntegerBF1 {
 	/*
 	Given an unsorted integer array, find the smallest missing positive integer. // Simple 
     [2,8,10,1,0, 2,1] => 3	
-
+	
 	 */
 	
 	//	Sort the input array
@@ -20,9 +20,9 @@ public class P004SmallestMissingIntegerBF1 {
 
 		int output=1;
 		
-		Arrays.sort(input);
+		Arrays.sort(input); // oLog(N)
 		
-		for(int i=0; i < input.length - 1; i++){
+		for(int i=0; i < input.length - 1; i++){  //o(N)
 			
 			if( input[i] == input[i+1]){
 				continue;	
@@ -51,4 +51,25 @@ public class P004SmallestMissingIntegerBF1 {
 		System.out.println(getMissingInteger(input));
 
 	}
+	
+	@Test
+	public void example2(){
+
+		int[] input = {1,2,2,-3};
+
+		
+		System.out.println(getMissingInteger(input));
+
+	}
+	
+	@Test
+	public void example3(){
+
+		int[] input = {1,2,3,4};
+
+		
+		System.out.println(getMissingInteger(input));
+
+	}
+	
 }
