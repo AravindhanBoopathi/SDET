@@ -1,0 +1,57 @@
+package ds.arrays;
+
+import java.util.HashSet;
+
+import org.junit.Test;
+
+public class P001SumIndicesHashing {
+
+	//Hashing
+
+	private boolean getSumIndices(int[] input,int k){
+
+		HashSet<Integer> values = new HashSet<Integer>(); 
+		
+		for (int i = 0; i < input.length; i++) { 
+			if (values.contains(input[i])) return true; 
+			
+			values.add(input[i]); 
+		}
+		return false;
+			
+	}
+
+
+
+	@Test
+	public void example1(){
+
+		int[] numbers = {2,3,1,4,6};
+		int target = 5;
+
+		
+		System.out.println(getSumIndices(numbers, target));
+
+	}
+
+	@Test
+	public void example2(){
+
+		int[] numbers = {2,3,-1,4,6};
+		int target = 5;
+
+		System.out.println(getSumIndices(numbers, target));
+
+	}
+
+	@Test
+	public void example3(){
+
+		int[] numbers = {2,3,1,4,1,4};
+		int target = 5;
+
+		System.out.println(getSumIndices(numbers, target));
+
+	}
+
+}

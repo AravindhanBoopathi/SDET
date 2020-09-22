@@ -1,6 +1,7 @@
 package ds.arrays;
 
 import java.util.Arrays;
+import java.util.regex.Pattern;
 
 import org.junit.Test;
 
@@ -29,10 +30,8 @@ private int[] getRotateArray(int[] a,int k){
 	flip2 = flip2.reverse();
 
 	
-	System.out.println(flip1.toString()+flip2.toString());
+	System.out.println(flip1.toString().replaceAll("[^-?0-9]+", " ") + flip2.toString().replaceAll("[^-?0-9]+", " "));
     
-	
-	
 	
 	throw new RuntimeException("No Matching indices");
 
