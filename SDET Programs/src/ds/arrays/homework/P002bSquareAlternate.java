@@ -21,20 +21,18 @@ public class P002bSquareAlternate {
 	Input: {}
 	output: Exception
 
-pseudocode :
-1)  If input is null -> Illegal Argument Exception
-2)	If input.length > 1
-      i)Traverse the array till its length
-         a)input[i] element -> input[i] * input[i];
-3) Sort the current array in Ascending order:
-		      i)Traverse the array till its length - 1, to position the current element 
-		      ii)Traverse the array from i+1 till its length, to position the next element
-		          a)if(input[i] <= input[j])
-		            continue;
-		          b)if(input[i] > input[j])
-		            temp = input[i]
-		            input[i] = input[j];
-		            input[j] = temp;
+	pseudocode :
+	
+	1. Initialize left=0 and right=n-1
+
+	2. if abs(left) >= abs(right) then store square(input[left])
+		at the end of result array and increment left pointer
+
+	else store square(input[right]) in the result array and decrement right pointer
+
+	decrement index of input array
+	
+	 	
 	 */
 
 
