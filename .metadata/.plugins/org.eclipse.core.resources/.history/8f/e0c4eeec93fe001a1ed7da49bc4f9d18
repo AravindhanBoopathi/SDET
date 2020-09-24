@@ -1,0 +1,50 @@
+package ds.arrays.homework;
+
+import java.util.Arrays;
+
+import org.junit.Test;
+
+public class P008aPeakElementBF {
+
+	/* 
+	 8) Find the peak index in a mountain array
+
+Input: arr = [0,1,0]
+Output: 1
+
+Input: arr = [0,10,5,2]
+Output: 1
+
+Input: arr = [10,-5,8,0]
+Output: 1
+
+Input: arr = [1,2,8,10]
+Output: 3
+ 
+Input: arr = [11,2,8,10]
+Output: 0	
+	  
+	  
+	  
+	  
+	  
+	  
+	*/
+	
+	private String solution(int[] input){
+		
+		
+		return Arrays.toString(input);
+	}
+	
+	@Test
+	public void testData1(){
+
+		int input[]= {};
+
+		System.out.println(solution(input));
+
+	}
+
+	
+}
