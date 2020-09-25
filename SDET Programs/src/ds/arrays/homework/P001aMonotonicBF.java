@@ -51,7 +51,6 @@ public class P001aMonotonicBF {
 	 */
 
 
-
 	private boolean monotonicArray(int[] input) {
 
 		if(input.length < 2){
@@ -65,9 +64,6 @@ public class P001aMonotonicBF {
 				continue;
 			}
 
-
-//			if(input[i]-input[i+1] != 0){
-
 				if(input[i+1]-input[i] > 0){
 					return compareGreater(input);
 				}
@@ -75,7 +71,6 @@ public class P001aMonotonicBF {
 					return compareLesser(input);
 				}
 
-//			}
 
 		}
 
@@ -88,7 +83,6 @@ public class P001aMonotonicBF {
 		int count=1;
 		for(int i=1; i<input.length - 1; i++){
 			if(input[i+1]-input[i]>=0){
-				//				1 2 3 4 5
 				count += 1;
 			}	
 		}
@@ -106,7 +100,6 @@ public class P001aMonotonicBF {
 		int count=1;
 		for(int i=1; i<input.length - 1; i++){
 			if(input[i+1]-input[i]<=0){
-				//				1 2 3 4 5
 				count += 1;
 			}	
 		}
@@ -117,65 +110,39 @@ public class P001aMonotonicBF {
 			return false;
 		}
 	}
-
-
+	
 	@Test
 	public void testData1(){
 		int input[]= {1,2,3,3,4,4,4,4,5};
-		if(monotonicArray(input)) {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}else {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}
+		System.out.println("Array is monotonic :" +monotonicArray(input) );
 	}
 
 	@Test
 	public void testData2(){
 		int input[]= {5,4,4,2,1,0};
-		if(monotonicArray(input)) {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}else {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}
+		System.out.println("Array is monotonic :" +monotonicArray(input) );
 	}
-
 	@Test
 	public void testData3(){
 		int input[]= {-3,-2,-2,-1,0,2};
-		if(monotonicArray(input)) {
 			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}else {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}
 	}
 
 	@Test
 	public void testData4(){
 		int input[]= {5,4,4,2,1,-5,-1};
-		if(monotonicArray(input)) {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}else {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}
+		System.out.println("Array is monotonic :" +monotonicArray(input) );
 	}
 
 	@Test
 	public void testData5(){
 		int input[]= {1,2,5,3,4,4,4,4,5};
-		if(monotonicArray(input)) {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}else {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}
+		System.out.println("Array is monotonic :" +monotonicArray(input) );
 	}
 
 	@Test
 	public void testData6(){
 		int input[]= {1,1,1,2};
-		if(monotonicArray(input)) {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}else {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}
+		System.out.println("Array is monotonic :" +monotonicArray(input) );
 	}	
 }

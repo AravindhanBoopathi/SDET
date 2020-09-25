@@ -1,5 +1,7 @@
 package ds.arrays.homework;
 
+import java.util.Arrays;
+
 import org.junit.Test;
 
 public class P001bMonotonicBF {
@@ -46,125 +48,107 @@ public class P001bMonotonicBF {
 		if(input.length < 2){
 			throw new IllegalArgumentException();
 		}
-
-
-		for(int i=0; i<input.length-1; i++){
-
-			if(input[i]-input[i+1] == 0){
-				continue;
+			int [] increasing = input.clone();
+			int [] decreasing = input.clone();
+			//sort array in ascending
+			for(int i=0; i<increasing.length; i++){
+				
+				for(int j=i+1; j<increasing.length; j++){
+					
+					if(increasing[i] < increasing[j]) {
+								
+						int temp = increasing[i];
+						increasing[i] = increasing[j];
+						increasing[j] = temp;
+					}
+				}
 			}
-
-
-//			if(input[i]-input[i+1] != 0){
-
-				if(input[i+1]-input[i] > 0){
-					return compareGreater(input);
+			
+			//sort array in descending
+			for(int i=0; i<decreasing.length; i++){
+				
+				for(int j=i+1; j<decreasing.length; j++){
+					
+					if(decreasing[i] > decreasing[j]) {
+								
+						int temp = decreasing[i];
+						decreasing[i] = decreasing[j];
+						decreasing[j] = temp;
+					}
 				}
-				if(input[i+1]-input[i] < 0){
-					return compareLesser(input);
+			}
+			
+			System.out.println(Arrays.toString(input));
+			System.out.println(Arrays.toString(increasing));
+			System.out.println(Arrays.toString(decreasing));
+		
+		for(int i=0; i<input.length; i++){
+
+				if(input[i]==input[i+1]){
+					continue;
 				}
 
-//			}
-
+					if(input[i+1]<input[i]){
+						return checkValues(input,increasing);
+					}
+					if(input[i+1]>input[i]){
+						return checkValues(input,decreasing);
+					}
 		}
-
 		return false;
 
-	}
-
-	private boolean compareGreater(int[] input){
-
-		int count=1;
-		for(int i=1; i<input.length - 1; i++){
-			if(input[i+1]-input[i]>=0){
-				//				1 2 3 4 5
-				count += 1;
-			}	
-		}
-
-		if(count == input.length-1){
-			return true;
-		}else{
-			return false;
-		}
 
 	}
 
-	private boolean compareLesser(int[] input){
+	
 
-		int count=1;
-		for(int i=1; i<input.length - 1; i++){
-			if(input[i+1]-input[i]<=0){
-				//				1 2 3 4 5
-				count += 1;
-			}	
+	private boolean checkValues(int[] input,int []temp) {
+		boolean flag =false;
+		for (int i = 0; i < temp.length; i++) {
+				if(input[i]==temp[i]) {
+					flag = true;
+				}
+				else {
+					return false;
+				}
 		}
-
-		if(count == input.length-1){
-			return true;
-		}else{
-			return false;
-		}
+		return flag;
 	}
 
 
 	@Test
 	public void testData1(){
 		int input[]= {1,2,3,3,4,4,4,4,5};
-		if(monotonicArray(input)) {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}else {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}
+		System.out.println("Array is monotonic :" +monotonicArray(input) );
 	}
 
 	@Test
 	public void testData2(){
 		int input[]= {5,4,4,2,1,0};
-		if(monotonicArray(input)) {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}else {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}
+		System.out.println("Array is monotonic :" +monotonicArray(input) );
 	}
 
 	@Test
 	public void testData3(){
 		int input[]= {-3,-2,-2,-1,0,2};
-		if(monotonicArray(input)) {
 			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}else {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}
 	}
 
 	@Test
 	public void testData4(){
 		int input[]= {5,4,4,2,1,-5,-1};
-		if(monotonicArray(input)) {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}else {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}
+		System.out.println("Array is monotonic :" +monotonicArray(input) );
 	}
 
 	@Test
 	public void testData5(){
 		int input[]= {1,2,5,3,4,4,4,4,5};
-		if(monotonicArray(input)) {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}else {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}
+		System.out.println("Array is monotonic :" +monotonicArray(input) );
 	}
 
 	@Test
 	public void testData6(){
 		int input[]= {1,1,1,2};
-		if(monotonicArray(input)) {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}else {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}
+		System.out.println("Array is monotonic :" +monotonicArray(input) );
 	}	
 }

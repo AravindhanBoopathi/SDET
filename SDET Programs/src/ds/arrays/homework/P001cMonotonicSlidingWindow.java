@@ -78,60 +78,36 @@ public class P001cMonotonicSlidingWindow {
 	@Test
 	public void testData1(){
 		int input[]= {1,2,3,3,4,4,4,4,5};
-		if(monotonicArray(input)) {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}else {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}
+		System.out.println("Array is monotonic :" +monotonicArray(input) );
 	}
 
 	@Test
 	public void testData2(){
-		int input[]= {1,1,1,1};
-		if(monotonicArray(input)) {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}else {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}
+		int input[]= {5,4,4,2,1,0};
+		System.out.println("Array is monotonic :" +monotonicArray(input) );
 	}
 
 	@Test
 	public void testData3(){
 		int input[]= {-3,-2,-2,-1,0,2};
-		if(monotonicArray(input)) {
 			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}else {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}
 	}
 
 	@Test
 	public void testData4(){
 		int input[]= {5,4,4,2,1,-5,-1};
-		if(monotonicArray(input)) {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}else {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}
+		System.out.println("Array is monotonic :" +monotonicArray(input) );
 	}
 
 	@Test
 	public void testData5(){
 		int input[]= {1,2,5,3,4,4,4,4,5};
-		if(monotonicArray(input)) {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}else {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}
+		System.out.println("Array is monotonic :" +monotonicArray(input) );
 	}
 
 	@Test
 	public void testData6(){
 		int input[]= {1,1,1,2};
-		if(monotonicArray(input)) {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}else {
-			System.out.println("Array is monotonic :" +monotonicArray(input) );
-		}
+		System.out.println("Array is monotonic :" +monotonicArray(input) );
 	}	
 }
