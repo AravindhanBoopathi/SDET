@@ -5,7 +5,6 @@ import org.junit.Test;
 public class P001cMonotonicSlidingWindow {
 
 	/*
-	 
 	3) Given an array, return true if and only if the given array A is monotonic.
 
 			An array is monotonic if it is either monotone increasing or monotone decreasing.
