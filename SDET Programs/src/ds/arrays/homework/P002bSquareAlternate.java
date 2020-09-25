@@ -22,90 +22,51 @@ public class P002bSquareAlternate {
 	output: Exception
 
 	pseudocode :
-	
-	1. Initialize left=0 and right=n-1
 
-	2. if abs(left) >= abs(right) then store square(input[left])
-		at the end of result array and increment left pointer
+	1)  If input is null -> Illegal Argument Exception
 
-	else store square(input[right]) in the result array and decrement right pointer
+	2)	If input.length > 1
 
-	decrement index of input array
-	
-	 	
+		1. Initialize left=0 and right=n-1
+
+		2. if abs(left) >= abs(right) 
+			i. input[right] = square(input[left])
+
+		3. else 
+			i. input[right] == square(input[right]) 
+
+		4. right--;
+
+
 	 */
 
 
 
 	private int[] squareArray(int[] input) {
 
-
-		if(input[0]<0){
-			if(input.length < 1){
-				throw new IllegalArgumentException();
-			}
-
-			if(input.length >= 1){
-
-				for(int i=0; i<input.length; i++) {
-
-					input[i] *= input[i];
-
-				}			
-			}
-
-			return sortCurrentArray(input);
-		}
-
+		System.out.println(Arrays.toString(input));
 
 		if(input.length < 1){
 			throw new IllegalArgumentException();
 		}
 
-		if(input.length >= 1){
+		int[] output = new int[input.length];
+		int left = 0, right = input.length - 1;
 
-			for(int i=0; i<input.length; i++) {
-
-				input[i] *= input[i];
-
-			}			
-		}
-
-		return input;
-
-
-
-
-	}
-/*
-	3) Sort the current array in Ascending order:
-	      i)Traverse the array till its length - 1, to position the current element 
-	      ii)Traverse the array from i+1 till its length, to position the next element
-	          a)if(input[i] <= input[j])
-	            continue;
-	          b)if(input[i] > input[j])
-	            temp = input[i]
-	            input[i] = input[j];
-	            input[j] = temp;
-	
-	*/
-	
-	private int[] sortCurrentArray(int[] input) {
-
-		for(int i=0; i<input.length - 1; i++) {
-			for(int j=i+1; j<input.length; j++) {
-				if(input[j] - input[i] >= 0){
-				continue;
-				}
-
-				if(input[j] - input[i] < 0){
-					int temp = input[j];
-					input[j] = input[i];
-					input[i] = temp;
-				}
+		for(int i=input.length-1; i>=0; i--) {
+			if(Math.abs(input[left]) >= Math.abs(input[right])){
+				output[i] = input[left]*input[left];
+				left++;
+			}
+			else{
+				output[i] = input[right]*input[right];
+				right--;
 			}
 		}
-		return input;
+
+		return output;
+
+
 	}
 
 
@@ -122,16 +83,17 @@ public class P002bSquareAlternate {
 	public void testData2(){
 
 		int input[]= {-8,-3,0,3,8};
-		
+
 		System.out.println(Arrays.toString(squareArray(input)));
 
 	}
 
+
 	@Test
 	public void testData3(){
 
-		int input[]= {0,1};
-
+		int input[]= {-3,1,2};
+		// 1 4 9
 		System.out.println(Arrays.toString(squareArray(input)));
 
 	}
@@ -139,7 +101,7 @@ public class P002bSquareAlternate {
 	@Test
 	public void testData4(){
 
-		int input[]= {};
+		int input[]= {4,5,6,7};
 
 		System.out.println(Arrays.toString(squareArray(input)));
 
