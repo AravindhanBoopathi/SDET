@@ -1,0 +1,44 @@
+package ds.string.homework;
+
+import java.util.Arrays;
+
+import org.junit.Test;
+
+public class P004StringPermutation {
+
+
+	/* 
+	 * 
+1) Given two strings s1 and s2, write a function to return true if s2 contains the permutation of s1. 
+In other words, one of the first string's permutations is the substring of the second string.
+
+Example 1:
+
+Input: s1 = "ab" s2 = "eidbaooo"
+Output: True
+Explanation: s2 contains one permutation of s1 ("ba").
+Example 2:
+
+Input:s1= "ab" s2 = "eidboaoo"
+Output: False
+
+	  
+	 
+	*/
+	
+	private String solution(int[] input){
+		
+		
+		return Arrays.toString(input);
+	}
+	
+	@Test
+	public void testData1(){
+
+		int input[]= {};
+
+		System.out.println(solution(input));
+
+	}
+
+}

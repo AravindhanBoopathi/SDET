@@ -1,0 +1,53 @@
+package ds.string;
+
+import java.util.Arrays;
+
+import org.junit.Test;
+
+/* Reverse a Sting
+ * 
+  input = "SDET"
+  output = "TEDS"
+  
+  input = "MADAM"
+  output = "MADAM"
+  
+  input = "MMMM"
+  output = "MMMM"
+  
+  BF:
+    
+  1. tocharArray()
+  
+  2. Traverse from i = 0 till String.length
+  	i. 
+  
+  toCharArray - aravind
+  charAt - vinoth
+  StringBuilder - dass
+  String.reverse - praveen
+  
+  
+
+*/
+public class P001aStringReverse {
+
+private String solution(String input){
+		
+		
+		
+		
+		return input;
+	}
+	
+	@Test
+	public void testData1(){
+
+		String input= "SDET";
+
+		System.out.println(solution(input));
+
+	}
+	
+	
+}

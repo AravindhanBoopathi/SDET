@@ -1,0 +1,34 @@
+package ds.string;
+
+import java.util.Arrays;
+
+import org.junit.Test;
+
+public class P003aRemoveVowels {
+
+	/*
+	 * remove vowels
+	 * 
+		input = "testleaf";
+		
+		1. replaceAll
+	
+	
+	*/
+	
+	
+private String solution(int[] input){
+		
+		
+		return Arrays.toString(input);
+	}
+	
+	@Test
+	public void testData1(){
+
+		int input[]= {};
+
+		System.out.println(solution(input));
+
+	}
+}

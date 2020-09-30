@@ -1,0 +1,57 @@
+package ds.string.homework;
+
+import org.junit.Test;
+
+public class P002DecodeString {
+
+/*	
+
+2) Given an encoded string, return its decoded string.
+
+Input: s = "3[a]2[bc]"
+Output: "aaabcbc"
+
+Input: s = "3[a2[c]]"
+Output: "accaccacc"
+
+BF1:
+
+	1. toCharArray - input[]
+	
+	
+	2. for(int i=0; i<input.length-1; i++)
+	 if(Character.isDigit(input[i])){
+			for(int j=0; j<Character.getNumericvalue(input[i]); j++){
+				syso(input[i++]);
+				if(Character.isAlpha(input[i+3]))syso(input[i+]);
+			}
+	
+	
+BF2:
+
+	
+	
+	
+*/	
+	
+	private void solutionBF(String input){
+	
+		
+		
+		
+		
+		System.out.println(Character.isAlphabetic('a'));
+		
+	}
+
+	@Test
+	public void testData1(){
+
+		String input= "3[a] 2[bc]";
+		
+		System.out.println(input);
+		solutionBF(input);
+	}
+
+	
+}

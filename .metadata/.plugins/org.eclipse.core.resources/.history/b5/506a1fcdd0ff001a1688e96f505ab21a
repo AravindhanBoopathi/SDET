@@ -1,0 +1,59 @@
+package ds.string.homework;
+
+import java.util.Arrays;
+
+import org.junit.Test;
+
+public class P001aReverseSentence {
+
+	/*
+
+1) Given a string, you need to reverse the order of characters in each word within a sentence 
+while still preserving whitespace and initial word order.
+
+Input:  "I am doing great"
+Output: "I ma gniod taerg"
+
+Input:  "Immmm mmmh"
+Output: "mmmmI hmmm"
+
+Input:  "123456 789"
+Output: "654321 987"
+
+BF:
+
+1. Split the input String with "Whiespace" - returns String[] strInput
+
+2. for(String i:strInput)
+		{
+		StringBuilder str = new StringBuilder();		
+		System.out.println(str.append(i).reverse.toString()+" ");
+		}
+	 */
+
+	private void solution(String input){
+			
+		String[] strInput = input.split(" ");
+		System.out.println(Arrays.toString(strInput));
+		
+		for(String i:strInput)
+		{
+		StringBuilder str = new StringBuilder();		
+		System.out.println(str.append(i).reverse.toString()+" ");
+		}
+		
+		
+		
+	}
+
+	@Test
+	public void testData1(){
+
+		String input= "I am doing great";
+		
+		System.out.println(input);
+		solution(input);
+	}
+
+
+}

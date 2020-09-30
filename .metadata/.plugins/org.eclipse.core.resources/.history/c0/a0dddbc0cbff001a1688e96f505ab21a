@@ -1,0 +1,11 @@
+package ds.string;
+
+public class P004aGetUniqueCharacters {
+
+	/*
+	 * getFirstIndex ad lastindex
+	 * 
+	 * map
+	 * 
+	*/
+}

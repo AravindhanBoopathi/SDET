@@ -1,0 +1,51 @@
+package ds.string;
+
+import java.util.Arrays;
+
+import org.junit.Test;
+
+public class P002aAnagram {
+
+	/*
+
+
+
+
+
+
+
+	 */
+
+	private Boolean solution(String input, String anagram){
+
+		char[] inputArray= input.toCharArray();
+		char[] anagramArray= anagram.toCharArray();
+
+
+		if(inputArray.length>anagramArray.length){
+			for(int i=0; i<anagramArray.length; i++){
+					
+				for(int j=0; i<inputArray.length; j++){
+					
+					
+					
+				}
+
+			}
+		}
+
+		return true;
+	}
+
+	@Test
+	public void testData1(){
+
+		String input= "abccbbabbabccba";
+
+		String anagram= "abc";
+
+		System.out.println(solution(input,anagram));
+
+	}
+
+}

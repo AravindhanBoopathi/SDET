@@ -1,0 +1,50 @@
+package ds.string.homework;
+
+import java.util.Arrays;
+
+import org.junit.Test;
+
+public class P005RotateImage {
+
+/*	Rotate an image
+ 
+ input: {[1,2,3],
+  		 [4,5,6],
+  		 [7,8,9]}
+ output: 
+ 		{[7,4,1],
+ 		 [8,5,2],
+ 		 [9,6,3]}
+ 
+ Pseudo-code:
+ 
+  int[][] input = {[1,2,3],[4,5,6],[7,8,9]}; 
+ 
+ 1. Traverse input array from i=2 till 0, i--
+ 	2. Traverse input array from from j=0 till 2
+			output[j][j] = input[i][j];
+*/	
+
+	
+private int[][] solution(int[][] input){
+		
+		int[][] output = new int[input.length][input.length];
+	
+		
+		return output;
+	}
+	
+	@Test
+	public void testData1(){
+
+		int[][] input = {{1,2,3},{4,5,6},{7,8,9}};
+
+		System.out.println(solution(input));
+
+	}
+
+	
+	
+	
+	
+}

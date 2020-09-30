@@ -92,7 +92,7 @@ public class P002bSquareAlternate {
 	@Test
 	public void testData3(){
 
-		int input[]= {-3,1,2};
+		int input[]= {-3,-2,-1};
 		// 1 4 9
 		System.out.println(Arrays.toString(squareArray(input)));
 

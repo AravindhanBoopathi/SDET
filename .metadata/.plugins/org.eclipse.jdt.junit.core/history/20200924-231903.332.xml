@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="P007aArrayIntersectionBF" project="SDET Programs" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="ds.arrays.homework.P007aArrayIntersectionBF" time="0.001">
-    <testcase name="testData1" classname="ds.arrays.homework.P007aArrayIntersectionBF" time="0.001"/>
-    <testcase name="testData2" classname="ds.arrays.homework.P007aArrayIntersectionBF" time="0.0"/>
-    <testcase name="testData3" classname="ds.arrays.homework.P007aArrayIntersectionBF" time="0.0"/>
-    <testcase name="testData4" classname="ds.arrays.homework.P007aArrayIntersectionBF" time="0.0"/>
-  </testsuite>
-</testrun>

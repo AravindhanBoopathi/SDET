@@ -1,0 +1,322 @@
+package ds.string.homework;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+
+import org.junit.Test;
+
+public class P003SwapAdjacentDuplicate {
+
+	/* 
+	 * 3) Given a string, check if the letters can be rearranged 
+so that two characters that are adjacent to each other are not the same.
+
+Input: "aab"
+Output: "aba"
+conscount = 2
+remLetters = 3 - 2 = 1
+logic = remainingletters * 2 >= consecutiveCount
+					2 >= 2 
+
+Input: "aaaaabcde"
+Output: "abacadaea"
+conscount = 5
+remLetters = 9 - 5 = 4
+logic = remainingletters * 2 >= consecutiveCount
+				4*2=8  >= 5
+
+
+
+Input: "bbcdefaaaaa"
+Output: "ababacadaef"
+conscount = 7
+remLetters = 11 - 7 = 4
+logic = remainingletters * 2 >= consecutiveCount
+				4*2=8  >= 7
+
+
+
+Input: "aaaaabbcdef"
+Output: "ababacadaef"
+conscount = 7
+remLetters = 11 - 7 = 4
+logic = remainingletters * 2 >= consecutiveCount
+				4*2=8  >= 7
+
+
+
+Input: "aaab"
+Output: ""
+conscount = 3
+remLetters = 4 - 3 = 1
+logic = remainingletters * 2 >= consecutiveCount
+				1*2=2  >= 3
+
+Input: "aaabcdeee"
+Output: "aeaeaebcd"
+conscount = 6
+remLetters = 9 - 6 = 3
+logic = remainingletters * 2 >= consecutiveCount
+				3*2=6  >= 6
+
+
+
+Input: "a"
+Output: ""
+
+BF:
+	consecutiveInputCount=0;
+	left=0; right=input.length-1;
+
+	1. Traverse i=0 till input.length - 1
+		i. input[i] == input[i+1]{
+				consecutiveInputCount = consecutiveInputCount + 1;
+		}
+
+		remainingletters = input.length - consecutiveCount;
+	 	}
+
+	 2.	if( remainingletters * 2 >= consecutiveCount ){
+
+	 		sort input;
+
+
+
+	 		i. while(left < right)
+
+Input:  "aaaaaaabbcdef"
+Output: "afaaaaabbcdea"
+	 	"afadaaabbcaea"
+	 	"afadababacaea"
+
+
+	 	"aaaaabbcdef"
+	 	 afaaabbcdea
+
+
+
+
+	 	 afaaabbcdea
+	 	 afadabbcaea
+	 	 afadabbcaea		
+	 			 a. if(input[left])== input[left+1])
+
+	 			 			char temp = input[++left];
+	 			 			input[left++] = input[right]; 
+	 			 			input[right--] = temp;
+	 			 			right--;
+
+	 			 left++;
+	 			 right--;	
+
+
+	 	}
+
+	 */
+
+	private String solutionBF(String input){
+
+		char[] strInput = input.toCharArray();
+
+		if(strInput.length<2){
+			throw new IllegalArgumentException();	
+		}
+	
+
+		int ccount=1,rcount=0;
+
+		//		to get ccount
+		for(int i=0; i < strInput.length - 1; i++){
+			if(strInput[i] == strInput[i+1]){
+				ccount++;
+			}
+		}
+
+		//		to get rcount
+		rcount = strInput.length - ccount;
+
+		if(rcount * 2 >= ccount){
+
+			int left=0, right = strInput.length-1;
+
+
+			Arrays.sort(strInput);
+
+
+			Map<Character, Integer> map = new HashMap<Character, Integer>();
+
+			for(char c: strInput){
+				map.put(c, map.getOrDefault(c, 0)+1);
+			}
+
+			System.out.println(map);
+
+			List<Entry<Character, Integer>> list = new LinkedList<Entry<Character, Integer>>(map.entrySet());  
+			//sorting the list elements  
+			Collections.sort(list , new Comparator<Entry<Character, Integer>>()   
+			{  
+				public int compare(Entry<Character, Integer> o1, Entry<Character, Integer> o2)   
+				{  
+
+					return o2.getValue().compareTo(o1.getValue());}}
+					);
+
+			System.out.println(list);
+
+
+			for(Entry<Character, Integer> p1 : list){
+				if(p1.getValue()>1){
+					System.out.println(p1.getKey());
+					map.put(p1.getKey(), p1.getValue()-1);
+					break;
+				}
+
+
+
+			}
+
+
+
+
+			/*
+			while(left<right){
+				if(strInput[left] == strInput[left+1]){
+					char temp = strInput[++left];
+					strInput[left] = strInput[right];
+					strInput[right--] = temp;
+//					right--;
+				}
+//				aaaaabbcdef
+//				afaaabbcdea
+//				
+				else
+				{
+					left++;
+
+				}
+
+			}
+
+			 */	
+
+			return Arrays.toString(strInput);
+
+		}
+
+
+
+		else
+			return "";
+	}
+
+	final class MyEntry<K, V> implements Map.Entry<K, V> {
+		private final K key;
+		private V value;
+
+		public MyEntry(K key, V value) {
+			this.key = key;
+			this.value = value;
+		}
+
+		@Override
+		public K getKey() {
+			return key;
+		}
+
+		@Override
+		public V getValue() {
+			return value;
+		}
+
+		@Override
+		public V setValue(V value) {
+			V old = this.value;
+			this.value = value;
+			return old;
+		}
+	}
+
+
+
+
+	@Test
+	public void testData1(){
+
+		String input= "aab";
+
+		System.out.println(input);
+		System.out.println(solutionBF(input));
+
+	}
+
+
+	@Test
+	public void testData2(){
+
+		String input= "aaaaabcde";
+
+		System.out.println(input);
+		System.out.println(solutionBF(input));
+
+	}
+
+
+	@Test
+	public void testData3(){
+
+		String input= "bbcdefaaaaa";
+
+		System.out.println(input);
+		System.out.println(solutionBF(input));
+
+	}
+
+
+	@Test
+	public void testData4(){
+
+		String input= "aaaaabbcdef";
+
+		System.out.println(input);
+		System.out.println(solutionBF(input));
+
+	}
+
+
+	@Test
+	public void testData5(){
+
+		String input= "aaab";
+
+		System.out.println(input);
+		System.out.println(solutionBF(input));
+
+	}
+
+	@Test
+	public void testData6(){
+
+		String input= "aaabcdeee";
+
+		System.out.println(input);
+		System.out.println(solutionBF(input));
+
+	}
+
+	@Test
+	public void testData7(){
+
+		String input= "ab";
+
+		System.out.println(input);
+		System.out.println(solutionBF(input));
+
+	}
+
+}

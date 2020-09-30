@@ -1,0 +1,20 @@
+package ds.string.homework;
+
+public class P001aReverseSentence {
+
+/*
+	
+1) Given a string, you need to reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
+
+Input:  "I am doing great"
+Output: "I ma gniod taerg"
+
+Input:  "Immmm mmmh"
+Output: "hmmm mmmmI"
+
+Input:  "I am doing great"
+Output: "I ma gniod taerg"
+
+
+*/
+}
