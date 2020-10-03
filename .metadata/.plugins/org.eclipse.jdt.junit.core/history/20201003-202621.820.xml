@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="P014SecondLeastRepeatingChar" project="SDET Programs" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="ds.string.homework.P014SecondLeastRepeatingChar" time="0.0">
+    <testcase name="testData1" classname="ds.string.homework.P014SecondLeastRepeatingChar" time="0.0"/>
+    <testcase name="testData2" classname="ds.string.homework.P014SecondLeastRepeatingChar" time="0.0"/>
+    <testcase name="testData3" classname="ds.string.homework.P014SecondLeastRepeatingChar" time="0.0"/>
+  </testsuite>
+</testrun>

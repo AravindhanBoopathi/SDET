@@ -163,3 +163,21 @@ Output: 'r'
 Input  : "Stale are there in tesla and you can steal the pears"
 Output : [Stale, tesla, steal]
 
+------------
+
+10/03
+Given a number, find all the combination of the prime number [without changing the sequence]
+
+input: 38
+output: 3
+
+Find the second least repeating number in a given String
+
+input: paypal
+
+find the longest  palindrome in a given String
+
+input: abaababaaba
+
+
+
