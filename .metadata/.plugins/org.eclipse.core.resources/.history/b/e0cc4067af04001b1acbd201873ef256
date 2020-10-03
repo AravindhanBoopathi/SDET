@@ -1,0 +1,34 @@
+package ds.string.homework;
+
+import java.util.Arrays;
+
+import org.junit.Test;
+
+public class P012AnagramSentence {
+
+/*
+
+9) Write a program that tells all the words containing same letters(anagram)
+Input  : "Stale are there in tesla and you can steal the pears"
+Output : [Stale, tesla, steal]
+	
+	
+*/	
+	
+private String solution(int[] input){
+		
+		
+		return Arrays.toString(input);
+	}
+	
+	@Test
+	public void testData1(){
+
+		int input[]= {};
+
+		System.out.println(solution(input));
+
+	}
+
+	
+}

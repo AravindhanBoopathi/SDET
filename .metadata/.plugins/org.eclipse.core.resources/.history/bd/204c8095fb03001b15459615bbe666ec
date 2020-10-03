@@ -1,0 +1,49 @@
+package ds.string.homework;
+
+import java.util.Arrays;
+
+import org.junit.Test;
+
+public class P009PalindromeSubString {
+
+/*	
+
+6) Given a string, how many palindromic substrings in this string.
+
+Example 1:
+
+Input: "aaa"
+Output: 6
+Explanation: Six palindromic strings: "a", "a", "a", "aa", "aa", "aaa".
+
+Example 2:
+
+Input: "aabc"
+Output: 4
+Explanation: Three palindromic strings: "a", "b", "c", "aa".
+
+
+
+	
+	
+	
+*/	
+	
+private String solution(int[] input){
+		
+		
+		return Arrays.toString(input);
+	}
+	
+	@Test
+	public void testData1(){
+
+		int input[]= {};
+
+		System.out.println(solution(input));
+
+	}
+
+	
+	
+}

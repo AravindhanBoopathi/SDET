@@ -1,9 +1,0 @@
-5 8 9 7 6 2 1 4
-
-- sub-array inside an array
-- consecutive element
-
-
-
-
-- windowSum += input[end] - input[end - K]; 
