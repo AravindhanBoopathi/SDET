@@ -1,3 +1,5 @@
-if negative number is more in an array and atleast one positive number
-
+Conditions
+1)if negative number is more  than positive numbers in an array and contains atleast one positive number
+2)should aim for positive target
+3)used only for finding maximum in an array
 
