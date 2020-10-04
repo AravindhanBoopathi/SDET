@@ -69,12 +69,29 @@ public class P015LongestPalindrome {
 	private void solution1(String input){
 
 		String maxP= "" ;
+		String ainput = "";
 		
 		Set<String> set = new HashSet<String>();
 
+//  	amadm   aab
+//		amamd	aba
+//		ammad	baa
+//		ammda	baa
+//		amdma	baa
+//		amdam	baa
+//		maadm
+//		maamd
+//		mamad
+//		mamda
+//		madma
+//		madam
+		
 		for(int i=0; i< input.length(); i++){
-			for(int j=i+1; j<= input.length(); j++){
-				set.add(input.substring(i,j));
+			ainput = "";
+			for(int j=i+1; j< input.length(); j++){
+				
+				ainput = ainput+Character.toString(input.charAt(i))+Character.toString(input.charAt(j));
+				set.add(ainput);
 			}
 		}
 		System.out.println(set);
@@ -89,7 +106,7 @@ public class P015LongestPalindrome {
 			}
 
 		}
-		System.out.println(maxP);
+		System.out.println(maxP.length());
 	}
 
 
@@ -114,20 +131,20 @@ public class P015LongestPalindrome {
 	@Test
 	public void testData1(){
 
-		String input = "amadam";
+		String input = "amadm";
 
 		solution1(input);
 
 	}
 
-	@Test
-	public void testData2(){
+//	@Test
+//	public void testData2(){
+//
+//		String input = "abaababaab";
+//
+//		solution1(input);
 
-		String input = "abaababaab";
-
-		solution1(input);
-
-	}
+//	}
 
 	
 

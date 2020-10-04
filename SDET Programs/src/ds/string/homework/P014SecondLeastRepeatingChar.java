@@ -126,7 +126,7 @@ Pseudo-code:
 	@Test
 	public void testData2(){
 
-		String input = "aravindhan";
+		String input = "ppp";
 
 		solution(input);
 
