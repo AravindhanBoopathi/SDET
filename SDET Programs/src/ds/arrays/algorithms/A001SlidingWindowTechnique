@@ -1,5 +1,12 @@
 Notes: https://docs.google.com/spreadsheets/d/1HFiYQ6SUular4YuSe2gzFAEKwNDp37PoyZVMeoQuYwo/edit#gid=1315163092
+https://www.youtube.com/watch?v=__guhvzO540
 
+Condition:
+1)Used for finding subarray in an array or substring in a string problem
+2)only applicable for consequtive elements
+3)subset of dynamic programming
+
+Sample:
 5 8 9 7 6 2 1 4
 
 - sub-array inside an array
