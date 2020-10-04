@@ -1,3 +1,7 @@
+ Condition:
+ 1)Used for dutch national problem
+ 2)used for sorting 0's,1's,2's (only for three values)
+ 3)uses one traversing for loop
  
  Pseudo Code :
  low = 0, mid = 0,
