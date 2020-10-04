@@ -1,3 +1,5 @@
+ 
+ Pseudo Code :
  low = 0, mid = 0,
  high = input.length -1
  
