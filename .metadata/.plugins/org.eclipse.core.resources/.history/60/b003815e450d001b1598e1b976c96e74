@@ -1,0 +1,33 @@
+package ds.arrays.string.assessment;
+
+import org.junit.Test;
+
+public class P005FunWithVowels {
+	/* 
+
+A subsequence is a sequence of letters in a string, in order, but with any number of characters removed.  
+Vowels in order are the letters in the string aeiou.  
+Given a string, determine the length of the longest subsequence that contains all of the vowels, in order, and no vowels out of order.   
+
+aeeiiaouu
+
+"aeiaaioooaauuaeiu"
+aeiiooouuu 
+
+	 */
+ 
+	private String solution(String input){
+
+
+		return input;
+	}
+
+	@Test
+	public void testData1(){
+
+		String input= " ";
+
+		System.out.println(solution(input));
+
+	}
+}

@@ -186,7 +186,7 @@ public class P003bSwapAdjacentDuplicate {
 	@Test
 	public void testData5() {
 
-		String input = "aab";
+		String input = "aaaabbbbcccc";
 
 		System.out.println("\n\n"+input);
 		solutionBF(input);

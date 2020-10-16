@@ -1,8 +1,9 @@
 package ds.string;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.junit.Test;
 
@@ -64,6 +65,31 @@ Set
 	}
 
 
+	private void solution2(String input){
+		
+		int max = 0;
+		
+		Set<Character> set = new HashSet<Character>();
+		
+		for(Character c: input.toCharArray()){
+			if(set.contains(c))
+				set.remove(c);
+			else 
+				set.add(c);
+		}
+		
+		if(set.size()>1){
+			max = input.length() - set.size()+1;
+		}else{
+			max = input.length();
+		}
+		
+		System.out.println(max);
+			
+	}
+
+	
+	
 	private void solution(String input){
 
 		int max = 0;
@@ -85,29 +111,29 @@ Set
 	@Test
 	public void testData1(){
 
-		String input = "abcabcbb";
+		String input = "abcde";
 
-		solution(input);
-
-	}
-
-	@Test
-	public void testData2(){
-
-		String input = "bbbbb";
-
-		solution(input);
+		solution2(input);
 
 	}
-
-	@Test
-	public void testData3(){
-
-		String input = "pwwkewwabcdee";
-
-		solution1(input);
-
-	}
+//
+//	@Test
+//	public void testData2(){
+//
+//		String input = "bbbbb";
+//
+//		solution1(input);
+//
+//	}
+//
+//	@Test
+//	public void testData3(){
+//
+//		String input = "pwwkewwabcdee";
+//
+//		solution1(input);
+//
+//	}
 
 
 }
