@@ -1,0 +1,46 @@
+package ds.arrays.string.assessment;
+
+import java.util.Arrays;
+
+import org.junit.Test;
+
+public class P001MoveOddNumbers {
+
+	/*
+
+Given an array numbers, write a function to move all odd numbers to the end of it 
+while maintaining the relative order of all elements.   
+
+Example:
+Input: [2,1,5,3,12] 
+Output: [2,12,1,5,3]
+
+Note: 
+1. You must do this in-place without making a copy of the array. 
+2. Minimize the total number of operations.
+
+
+	 */	
+
+	private String solution(int[] input){
+
+		
+		
+		
+
+		return Arrays.toString(input);
+	}
+
+	@Test
+	public void testData1(){
+
+		int input[]= {2,1,5,3,12};
+
+		System.out.println(solution(input));
+
+	}
+
+
+
+
+}

@@ -1,0 +1,48 @@
+package ds.arrays.string.assessment;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+
+import org.junit.Test;
+
+public class P004 {
+
+	
+	private List<Integer> solution(String input){
+
+		
+		
+		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+
+		for (char c : input.toCharArray()) {
+			map.put(c, map.getOrDefault(c, 0) + 1);
+		}
+
+		
+		List<Entry<Integer,Integer>> output1 = new LinkedList<Entry<Integer,Integer>>(map.entrySet());
+		
+		List<Integer> output = new ArrayList<Integer>();
+
+		for(int i: input){
+			output.add(i);
+		}
+		
+		
+		
+		return output;
+	}
+
+	@Test
+	public void testData1(){
+
+		String input = "abc";
+
+		System.out.println(solution(input));
+
+	}
+	
+}

@@ -24,7 +24,7 @@ For each test case print “Case C: X” without quotes.
 C is the case number, starting with 1. X is the maximum number of coins you can collect.
 
 Input:
-2
+20 1 1 10 1
 5
 1 2 3 4 5 6
 1
@@ -44,31 +44,80 @@ Pseudo-code:
 	
 	print Max(odd,even);
 	
-*/
+
 	
 private void solution(int[] input){
 		
 	int odd = 0, even = 0;
+	int odd2 = 0, even2 = 0;
+	int odd3 = 0, even3 = 0;
+	int index = 0;
 	
-		for(int i=0; i< input.length+1/2; i++){
-			odd += input[i];
-			i++;
+	
+	
+		for(int i=0; i<= input.length/2; i++){
+			odd += input[index];
+			index+=2;
 		}
-		for(int i=1; i< input.length/2; i++){
+		index=1;
+		for(int i=1; i<= input.length/2 + 1; i++){
 			even += input[i];
-			i++;
+			index+=2;
 		}
 	
-		System.out.println(Math.max(odd, even));
+//		20, 1, 1, 20, 1, 1, 20
+		if(input.length>3){
+		index=0;	
+		for(int i=0; i< input.length/3 + 1; i++){
+			
+			odd2 += input[index];
+			index += 3;
+			
+		}
+		
+		index =1;
+//		1, 20, 1, 1, 20, 1, 1, 20
+		for(int i=1; i< input.length/3 + input.length%3; i++){
+			even2 += input[index];
+			index += 3;
+		}
+		
+		
+		
+		}
+		
+		System.out.println( Math.max(even3, Math.max(odd3,  Math.max(even2, Math.max(odd2, Math.max(even, odd)))))  );
 		
 	}
+*/
+
+private static long splitAndTraverse(int[] arr, int currentIndex, boolean lastKollected){
+	if(currentIndex == arr.length-1){
+		return 0;
+	}
+	if(lastKollected){
+		return splitAndTraverse(arr, currentIndex + 1, false);
+	}
 	
+	long unselectedPath = splitAndTraverse(arr, currentIndex + 1, false);
+	long selectedPath = splitAndTraverse(arr, currentIndex + 1, true) + arr[currentIndex];
+	return Math.max(selectedPath, unselectedPath);
+
+
+
+}
+
+
+
+
+
+/*
 	@Test
 	public void testData1(){
 
 //		int numberOfTestCase = 2;
 //		int numberOfMonsters = 5;
-		int input[] = {1, 2, 3, 4, 5}; 
+		int input[] = {20, 1, 20}; 
 		
 		solution(input);
 
@@ -79,11 +128,54 @@ private void solution(int[] input){
 
 //		int numberOfTestCase = 2;
 //		int numberOfMonsters = 5;
-		int input[] = {10}; 
+		int input[] = {1, 20, 1}; 
 		
 		solution(input);
 
 	}
 	
-	
+	@Test
+	public void testData3(){
+
+//		int numberOfTestCase = 2;
+//		int numberOfMonsters = 5;
+		int input[] = {20, 1, 1, 20, 1, 1, 20}; 
+		
+		solution(input);
+
+	}
+
+	@Test
+	public void testData4(){
+
+//		int numberOfTestCase = 2;
+//		int numberOfMonsters = 5;
+		int input[] = {1, 20, 1, 1, 20, 1, 1, 20}; 
+		
+		solution(input);
+
+	}
+*/	
+	@Test
+	public void testData5(){
+
+//		int numberOfTestCase = 2;
+//		int numberOfMonsters = 5;
+		int input[] = {1, 2, 3, 4, 5, 6, 7, -1}; 
+		
+		System.out.println(splitAndTraverse(input, 0, false));
+
+	}
+/*
+	@Test
+	public void testData6(){
+
+//		int numberOfTestCase = 2;
+//		int numberOfMonsters = 5;
+		int input[] = {10,10,10}; 
+		
+		solution(input);
+
+	}
+*/	
 }
