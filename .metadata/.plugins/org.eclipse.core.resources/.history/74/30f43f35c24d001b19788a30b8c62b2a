@@ -1,0 +1,102 @@
+package ds.arrays;
+
+import java.util.AbstractMap.SimpleEntry;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map.Entry;
+
+import org.junit.Test;
+
+public class P011Mobiles {
+
+
+	/* 
+	pseudo-code:
+	
+	1. map the input[][] like - value as Number of MobileType and key as Number Of each Mobile types
+	2. sort by value
+	3. loop while(truckSize == 0)
+		
+		truckSize = truckSize - get(0).getValue();
+		output = output + get(0).getkey()
+		reduce key by 1
+		
+		
+		
+	``
+
+
+
+	 */
+
+	private int solution(int[][] input, int truckSize){
+
+		int output = 0;
+		
+		List<Entry<Integer,Integer>> list = new ArrayList<>();
+		
+		for (int i = 0; i <= 2; i++) {
+//			row - 
+			for (int j = 0; j < 1; j++) {
+				int key = input[i][j++];
+				int value = input[i][j];
+			list.add(new SimpleEntry(key, value));
+			}
+		}
+		
+		Collections.sort( list, new Comparator<Entry<Integer, Integer>>() {
+            public int compare(Entry<Integer, Integer> o1, Entry<Integer, Integer> o2) {
+
+                return o2.getValue().compareTo(o1.getValue());
+            }
+        }
+        
+    );
+		System.out.println(list);
+		
+		for (Entry<Integer, Integer> entry : list) {
+			
+			int mobileTypeCount = Math.min(truckSize, entry.getKey());
+			output+= mobileTypeCount * entry.getValue();
+			truckSize -= mobileTypeCount;
+			
+			if(truckSize == 0) break;
+			
+		}
+		
+		/*
+		int index = 0;
+		
+		while(truckSize >= 0){
+			
+			int currentKey = 0;
+			
+			currentKey = list.get(index).getKey();
+			
+			if(currentKey > 0){
+				truckSize--;	
+				output += list.get(index).getValue();
+				currentKey--;
+			}
+			if(currentKey == 0) index++;	
+			
+			
+		}*/
+		
+		return output;
+	}
+
+	@Test
+	public void testData1(){
+
+		int input[][] = {{1,3},{2,2},{3,1}};
+		int truckSize = 4;
+				
+
+		System.out.println(solution(input, truckSize));
+
+	}
+	
+}

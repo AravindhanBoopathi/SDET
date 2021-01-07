@@ -1,0 +1,71 @@
+package homework.ds.string;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.junit.Test;
+
+public class P017DictionayWords {
+
+	/* 
+
+	https://leetcode.com/problems/word-break/
+
+Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, 
+determine if s can be segmented into a space-separated sequence of one or more dictionary words.
+
+Note:
+
+The same word in the dictionary may be reused multiple times in the segmentation.
+You may assume the dictionary does not contain duplicate words.
+
+"bb"
+["a","b","bbb","bbbb"]
+
+Example 1:
+
+Input: s = "leetcode", wordDict = ["leet", "code"]
+Output: true
+Explanation: Return true because "leetcode" can be segmented as "leet code".
+Example 2:
+
+Input: s = "applepenapple", wordDict = ["apple", "pen"]
+Output: true
+Explanation: Return true because "applepenapple" can be segmented as "apple pen apple".
+             Note that you are allowed to reuse a dictionary word.
+Example 3:
+
+Input: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
+Output: false
+
+Another mEthos : Using List and remove characters
+	 */
+
+	private Boolean solution(String s, String[] wordDict){
+
+
+		for(String i: wordDict){
+
+			Pattern pattern = Pattern.compile(i);
+			Matcher matcher = pattern.matcher(s);
+			boolean matchFound = matcher.find();
+			
+			if(matchFound) s = s.replaceFirst(i,"");
+			
+			if(!matchFound) return false; 
+		}
+
+		return true;
+	}
+
+	@Test
+	public void testData1(){
+
+		String s = "catsdog";
+		String[] wordDict = {"cats", "dog"};
+
+		System.out.println(solution(s, wordDict));
+
+	}
+
+}

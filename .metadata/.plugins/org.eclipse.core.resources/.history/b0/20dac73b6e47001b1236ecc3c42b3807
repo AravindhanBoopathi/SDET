@@ -1,0 +1,71 @@
+package ds.string;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+
+import org.junit.Test;
+
+public class P013BannedWords {
+
+	/* 
+
+		- find occurence of each words
+		
+
+
+	 */
+
+	private String solution(String s, String[] banned){
+
+		String[] input = s.split(" ");
+		
+		Map<String, Integer> map = new HashMap<>();
+		
+		for(String each: input){
+			
+			String temp = each.replaceAll("\\p{Punct}","").toLowerCase();  
+			
+			map.put(temp, map.getOrDefault(temp, 0)+1);
+		}
+		
+		List<Map.Entry<String, Integer> > list = 
+	               new LinkedList<Map.Entry<String, Integer> >(map.entrySet()); 
+	  
+	        // Sort the list 
+	        Collections.sort(list, new Comparator<Map.Entry<String, Integer> >() { 
+	            public int compare(Map.Entry<String, Integer> o1,  
+	                               Map.Entry<String, Integer> o2) 
+	            { 
+	                return (o2.getValue()).compareTo(o1.getValue()); 
+	            } 
+	        }); 
+	        
+	        List<String> wordList = Arrays.asList(banned);      
+	        
+	    for (int i = 0; i < list.size(); i++) {
+			
+	    	if(!wordList.contains(list.get(i).getKey()) ){
+	    		return list.get(i).getKey();
+	    	}
+	    	
+		}   
+		
+		return "";
+	}
+
+	@Test
+	public void testData1(){
+
+		String input= "Bob hit a ball, the hit BALL flew far after it was hit.";
+		String[] banned = {"hit"};
+		System.out.println(solution(input, banned));
+
+	}
+	
+	
+}

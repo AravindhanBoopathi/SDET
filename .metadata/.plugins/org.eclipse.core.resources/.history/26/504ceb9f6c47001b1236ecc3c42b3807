@@ -1,0 +1,48 @@
+package ds.string;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.Test;
+
+public class P013BannedWords {
+
+	/* 
+
+
+
+
+	 */
+
+	private String solution(String s){
+
+		String[] input = s.split(" ");
+		
+		Map<String, Integer> map = new HashMap<>();
+		
+		for(String each: input){
+			
+			String temp = each.replaceAll("\\p{Punct}","");  
+			
+			map.put(temp, map.getOrDefault(temp, 0)+1);
+		}
+		
+		
+		System.out.println(Arrays.toString(input));
+		
+		
+		return "";
+	}
+
+	@Test
+	public void testData1(){
+
+		String input= "Bob hit a ball, the hit BALL flew far after it was hit.";
+
+		System.out.println(solution(input));
+
+	}
+	
+	
+}

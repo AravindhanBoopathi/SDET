@@ -1,0 +1,23 @@
+package ds.arrays.string.revision;
+
+import org.junit.Test;
+
+public class P013LetterWordMap {
+
+	private int[] solution(int[] input){
+
+
+		return input;
+	}
+
+	@Test
+	public void testData1(){
+
+		int input[]= {};
+
+		System.out.println(solution(input));
+
+	}
+
+	
+}

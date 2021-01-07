@@ -1,0 +1,47 @@
+package ds.string;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+
+public class P012AnagramList {
+
+	/*
+Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+Example 1:
+Input: strs = ["eat","tea","tan","ate","nat","bat"]
+Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+
+
+
+
+	
+	pseudo code :
+while (list size > 0)
+add the char in list[i] to a set
+remove thr value from list
+if(set.add(char in list [i])))
+	
+	
+	
+	*/
+	
+	private List<List<String>> solution(String[] input){
+		
+		List<List<String>> output = new ArrayList<>();
+
+		return output;
+	}
+
+	@Test
+	public void testData1(){
+
+		String[] input= {"eat","tea","tan","ate","nat","bat"};
+
+		System.out.println(solution(input));
+
+	}
+	
+	
+}

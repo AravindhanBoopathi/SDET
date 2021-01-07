@@ -1,0 +1,63 @@
+package ds.string;
+
+import org.junit.Test;
+
+public class P011NumberInWords {
+
+	/*
+1) Convert a Integer to its English words representation.
+
+Input: num = 123
+Output: "One Hundred Twenty Three"
+
+Input: num = 1,234,567
+Output: "One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven"
+
+Input: 1000000
+Output: One Million
+
+Input: 40
+Output: Forty
+
+Input: 0
+Output: Zero
+
+Input: -1
+Output: Invalid
+	
+	*/
+	
+	String[] ones={"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+			"eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
+	String tens[]= {"","Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety"};
+	
+	@Test
+	public void testData1(){
+
+		int input= 100;
+
+		System.out.println(solution(input));
+
+	}
+	
+	private String solution(int input){
+		
+		 if(input == 0)	return "Zero";
+	     if(input < 0)	return "Invalid Input";
+
+		return recursive(input);
+	}
+
+	private String recursive(int input) {
+		
+		if(input/1000000000 > 0)	return recursive(input/1000000000)+" billion "+ recursive(input%1000000000);
+		if(input/1000000 > 0)	return recursive(input/1000000)+" million "+ recursive(input%1000000);
+		if(input/1000 > 0)	return recursive(input/1000)+" thousand "+ recursive(input%1000);
+		if(input/100 > 0)	return recursive(input/100)+" hundred "+ recursive(input%100);
+		if(input/20 >= 0)	return tens[input/10]+" hundred "+ recursive(input%10);
+		return ones[input];
+	}
+	
+	
+	
+}

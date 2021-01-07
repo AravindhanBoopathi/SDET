@@ -1,0 +1,31 @@
+package homework.ds.string;
+
+import org.junit.Test;
+
+public class P018SubStringDistinctCharacter {
+
+	/* 
+
+	https://leetcode.com/problems/word-break/
+	
+	
+
+
+	 */
+
+	private String solution(String input){
+
+
+		return input;
+	}
+
+	@Test
+	public void testData1(){
+
+		String input= " ";
+
+		System.out.println(solution(input));
+
+	}
+	
+}

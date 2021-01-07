@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;ChangeRequest.java&apos; to &apos;RestAssured/src/main/java/tryOuts&apos;&#x0D;&#x0A;- Original project: &apos;RestAssured&apos;&#x0D;&#x0A;- Destination element: &apos;RestAssured/src/main/java/tryOuts&apos;&#x0D;&#x0A;- Original element: &apos;ChangeRequest.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src\/main\/java&lt;tryOuts" element1="/src\/main\/java&lt;{ChangeRequest.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1607841041448" units="1" version="1.0"/>
+</session>

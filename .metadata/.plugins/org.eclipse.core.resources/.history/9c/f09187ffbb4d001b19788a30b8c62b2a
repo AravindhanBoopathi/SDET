@@ -1,0 +1,41 @@
+package ds.arrays;
+
+import org.junit.Test;
+
+public class P011Mobiles {
+
+
+	/* 
+	pseudo-code:
+	
+	1. map the input[][] like - key as Number of MobileType and value as Number Of each Mobile types
+	2. sort by value
+	3. loop while(truckSize == 0)
+		
+		truckSize = truckSize - get(0).getKey();
+		output = 
+		
+	``
+
+
+
+	 */
+
+	private int solution(int[][] input, int truckSize){
+
+
+		return 0;
+	}
+
+	@Test
+	public void testData1(){
+
+		int input[][] = {{1,3},{2,2},{3,1}};
+		int truckSize = 4;
+				
+
+		System.out.println(solution(input, truckSize));
+
+	}
+	
+}

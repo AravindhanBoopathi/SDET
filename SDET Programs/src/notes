@@ -1,0 +1,76 @@
+ArrayList - index
+
+LinkedList - relation
+singly - traverse only one side
+doubly - traverse both side(java only has doubly)
+
+Terminology:
+- head
+- pointer
+- node
+- tail
+
+https://github.com/williamfiset/Algorithms/
+
+
+Tree : n - nodes , n-1 - edges
+Root
+Parent
+Child
+Leaf node - has no child
+
+
+Binary Tree : max 2 nodes
+
+
+BST(Balanced Search/ Binary Search tree) : left lesser value, right greater value
+	add element in BST
+	find element in BST(diff(element - current node) > 0 - right, diff(element - current node) < 0 - left, diff(element - current node) = 0 - Found)
+	replace element in BST(left largest (ll) or right side smallest)
+	
+Traverse:
+
+Pre-order : left-left-leafleft
+Post-order	: left Right Parent
+Inorder : LeftParentRight
+LevelOrder
+
+BreadthFirstSearch - Queue: Pop out current mode, add child of current removed node
+
+
+
+Property based testing, tools
+Shrinking
+Exploratory
+State based testing
+Structural 
+Integration
+
+Parito rule: 80% of defects come from 20% of Pblms
+
+Alternate Flow
+
+---
+
+Zomato Food Order: 
+
+Scenario: E2E conversation 
+	Scenarios are generally/logicslly Positive ones
+
+Identifying Scenario: 
+	1. Talking with end user
+	2. How much it impacts business?
+
+
+Testcases: Label it based on Prioritisation /Catgeorization
+
+Functional, Security, Performance and 
+
+
+Testcase enumeration
+New Desktop application, accepting pdf content and create HTML content
+include low level
+
+
+---
+

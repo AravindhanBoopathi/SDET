@@ -1,0 +1,45 @@
+package ds.arrays.string.revision;
+
+public class P010 {
+
+/*
+1) Write a program to move all the positive numbers to end. 
+
+Input: [4, -1, 9, 0, 2, -4, 5]
+Output: [-1, 0, -4, 4, 9, 2, 5]
+
+Algorithm: Use 2 Pointer
+
+2) Given two arrays,find the intersection of 2 arrays.
+
+Input: nums1 = [11,2,12,1], nums2 = [2,12]
+Output: [2,12]
+
+Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+Output: [9,4]
+
+Algorithm: Use 2 Pointer
+
+4) Given 2 input strings, return the minimum window in the first string which will contain all the characters in second string.
+
+Input: str1 = "KSTRKSE", str2 = "KST"
+Output: "KST"
+
+Input: str1 = "KASRTRKSE", str2 = "ST"
+Output: "SRT"
+
+Algorithm: Sliding Window
+
+Explanation: There are 2 matches "SRT" and "TRKS" and out of this first one is shorter window
+
+5) Write a program to fetch the sub array of length k from a given array and the sub array must have maximum sum of all combinations (without sorting the array)
+
+Input: [4,2,11,1,23,2,3,15,14] , k = 3
+Output: [11,1,23]
+
+Input: [4,2,1,-7,23,2,-3,15,14], k = 4
+Output: [2,-3,15,14]
+
+Algorithm: Sliding Window	
+*/	
+}

@@ -1,0 +1,5 @@
+package wireMock;
+
+public class CreateServiceInstance {
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;P019OneDuplicate.java&apos; to &apos;SDET Programs/src/revision.arrays.string&apos;&#x0D;&#x0A;- Original project: &apos;SDET Programs&apos;&#x0D;&#x0A;- Destination element: &apos;SDET Programs/src/revision.arrays.string&apos;&#x0D;&#x0A;- Original element: &apos;revision.arrays.string.P019OneDuplicate.java&apos;" description="Copy compilation unit" destination="/src&lt;revision.arrays.string" element1="/src&lt;revision.arrays.string{P019OneDuplicate.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1609862959623" units="1" version="1.0"/>
+</session>

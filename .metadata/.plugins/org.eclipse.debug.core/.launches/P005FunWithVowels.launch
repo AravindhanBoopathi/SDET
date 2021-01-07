@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.junit.launchconfig">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/SDET Programs/src/ds/arrays/string/assessment/P005FunWithVowels.java"/>
+<listEntry value="/SDET Programs/src/revision/arrays/string/P005FunWithVowels.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
@@ -9,7 +9,7 @@
 <stringAttribute key="org.eclipse.jdt.junit.CONTAINER" value=""/>
 <booleanAttribute key="org.eclipse.jdt.junit.KEEPRUNNING_ATTR" value="false"/>
 <stringAttribute key="org.eclipse.jdt.junit.TEST_KIND" value="org.eclipse.jdt.junit.loader.junit4"/>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="ds.arrays.string.assessment.P005FunWithVowels"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="revision.arrays.string.P005FunWithVowels"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="SDET Programs"/>
 <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value=""/>
 </launchConfiguration>

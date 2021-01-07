@@ -1,0 +1,73 @@
+package homework.ds.arrays;
+
+import org.junit.Test;
+
+public class P009LongestSubString2DistinctChar {
+
+
+	/* 
+
+Q1) Given a string s , find the length of the longest substring t  that contains at most 2 distinct characters.
+
+Example 1:
+
+Input: "eceba"
+Output: 3
+Explanation: t is "ece" which its length is 3.
+Example 2:
+
+Input: "ccaabbb"
+		0123456
+		  2	  6
+Output: 5
+Explanation: t is "aabbb" which its length is 5.
+
+
+
+
+
+
+
+	 */
+
+	private int solution(String input){
+
+		char[] inputArray = input.toCharArray();
+		int maxCount = 0;
+		
+		
+		for(int i=0; i<inputArray.length; i++){
+			StringBuilder unique = new StringBuilder();
+			unique.setLength(0);
+			unique.append(inputArray[i]);
+			
+			for(int j=i+1; j<inputArray.length; j++){
+				if(inputArray[i]!=inputArray[j] && unique.toString().indexOf(inputArray[j]) == -1) {
+					unique.append(inputArray[j]);
+				}
+				
+				if(unique.length() <= 2 ){
+					maxCount = Math.max((j-i)+1 , maxCount);
+				}
+				if(unique.length() > 2){
+					break;
+				}
+			}
+		}
+		
+		
+		return maxCount;
+	}
+
+	@Test
+	public void testData1(){
+
+		String input= "ccaabbb";
+
+		System.out.println(solution(input));
+
+	}
+
+	
+	
+}

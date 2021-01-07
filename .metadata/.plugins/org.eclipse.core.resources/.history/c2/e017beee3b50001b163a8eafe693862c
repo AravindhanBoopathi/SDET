@@ -1,0 +1,40 @@
+package revision.arrays.string;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+import org.junit.Test;
+
+public class P020ClosestPrime {
+
+	/* 
+
+		pseudo-code:
+		
+		- prime number logic function (loop till current number/2 and check current number mod index == 0)
+		
+		- initialize 2 pointers (left, right)
+		
+		- 
+
+	 */
+
+	private int solution(int input){
+
+		
+		
+		return 0;
+	}
+
+	@Test
+	public void testData1(){
+
+		int a = 8;
+
+		System.out.println(solution(a));
+
+	}
+	
+	
+}

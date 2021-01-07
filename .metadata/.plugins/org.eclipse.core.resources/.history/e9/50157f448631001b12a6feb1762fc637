@@ -1,0 +1,68 @@
+package ds.arrays.string.revision;
+
+import org.junit.Test;
+
+public class P010MovePositiveIntegers {
+
+/*
+1) Write a program to move all the positive numbers to end. 
+
+Input: [4, -1, 9, 0, 2, -4, 5]
+Output: [-1, 0, -4, 4, 9, 2, 5]
+
+Algorithm: Use 2 Pointer
+
+Pseudo-code:
+
+Initialize:
+- left pointer = 0th index
+- right pointer = 1st index
+
+
+while(right > input.length-1)
+
+if(input[left] > 0 && input[right] <=  0) - swap input[left] with input[right]; left++; right++;
+if(input[left] > 0 && input[right] > 0) - swap input[left] with input[right]; right++;
+
+
+
+
+*/	
+
+
+	private int[] solution(int[] input){
+
+		int left=0, right=1;
+		
+		while(right > input.length - 1){
+			
+			if(input[left]>0 && input[right] <=0){
+				int temp = input[left];
+				input[left++] = input[right];
+				input[right] = temp;
+			}
+			if(input[left]>0 && input[right] >0){
+				int temp = input[left];
+				input[left] = input[right];
+				input[right] = temp;
+			}
+			
+			right++;
+		}
+		
+		
+		return input;
+	}
+
+	@Test
+	public void testData1(){
+
+		int input[]= {4, -1, 9, 0, 2, -4, 5};
+
+		System.out.println(solution(input));
+
+	}
+
+
+
+}

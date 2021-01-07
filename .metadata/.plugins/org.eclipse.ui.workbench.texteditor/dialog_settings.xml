@@ -12,6 +12,8 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="package revision.arrays.string;"/>
+			<item value="package tree;"/>
 			<item value="package ds.arrays.string.assessment;"/>
 			<item value="k"/>
 			<item value="package ds.string.homework;"/>

@@ -1,0 +1,79 @@
+package revision.arrays.string;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+import org.junit.Test;
+
+public class P017RearrageString {
+
+	/*
+
+pseudo-code:
+	
+	step 1: Find occurence of each charcter using HashMap
+	step 2: Sort the unique keySet using Arrays.sort
+	
+	step 3: initialize consecutiveCount
+	step 4: Traverse each keys(use sorted char array for key reference) in the map
+	step 5: 
+	
+	
+	 
+	*/
+	
+	private String rearrangeString(String s, int k){
+		
+		StringBuffer output = new StringBuffer(); 
+		
+		char[] input = s.toCharArray();
+		Map<Character, Integer> map = new HashMap<>();
+		for (char c : input) {
+			map.put(c, map.getOrDefault(c, 0)+1);
+		}
+		
+		Set<Character> set = map.keySet();
+		
+		Character[] inputKeySet = new Character[set.size()]; 
+		set.toArray(inputKeySet);
+		Arrays.sort(inputKeySet, Collections.reverseOrder());
+		
+		int inputKeySetSize = inputKeySet.length;
+		int consecutiveCount = 0;
+		
+		for (int i = 0; i < inputKeySetSize; i++) {
+	
+			char currentChar = inputKeySet[i];
+			
+			while(consecutiveCount > k){
+				
+			}
+			
+			
+			
+			output.append(currentChar);
+			map.put(currentChar, map.get(inputKeySet)-1);
+			consecutiveCount++;
+			
+		}
+		
+		
+		
+		return null;
+	}
+	
+	
+	@Test
+	public void inputData1(){
+		String s = "zzzazz";
+		int k = 2;
+		
+		System.out.println(rearrangeString(s, k));
+		
+	}
+	
+	
+}
